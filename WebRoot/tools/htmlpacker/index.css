@@ -1,0 +1,23 @@
+.wrapper {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.leftBar {
+	float: left;
+}
+.rightBar {
+	float: right;
+}
+
+.leftBar textarea,.rightBar textarea {
+	width: 410px;
+	height: 500px;
+}
+.operateLR {
+	float: left;
+	width: 136px;
+	text-align: center;
+	margin: 30px 5px 0 5px;
+	margin-left: 144px;
+}

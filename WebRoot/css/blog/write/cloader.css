@@ -1,0 +1,94 @@
+.czhezhao{
+	position: absolute;
+	top: 815%;
+	left: 42%;
+	width: 400px;
+	height: 225px;
+	background-color: white;
+	opacity: .5;
+	z-index: 1001;
+	display: none;
+}
+.cloader{
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    top: 475px;
+    left: 42%;
+    display: none;
+    z-index: 1002;
+}
+.cloader .cloading{
+    width: 150px;
+    height: 100px;
+    margin: 0 auto;
+   position: relative;
+}
+.cloader .cloading div{
+    width: 15px;
+    height: 15px;
+    border: 1px solid;
+    border-radius: 8px;
+    position: absolute;
+    left: 95px;
+    top: 35px;
+    animation: cloadani 2s ease-out infinite;
+    transition: all 2s  ease-out;
+}
+.cloader .cloading div:nth-child(2){
+	left: 87px;
+	top: 52px;
+	animation-delay: .2s;
+}
+.cloader .cloading div:nth-child(3){
+	left: 70px;
+	top: 60px;
+	animation-delay: .4s;
+}
+.cloader .cloading div:nth-child(4){
+	left: 55px;
+	top: 52px;
+	animation-delay: .6s;
+}
+.cloader .cloading div:nth-child(5){
+	left: 48px;
+	top: 35px;
+	animation-delay: .8s;
+}
+.cloader .cloading div:nth-child(6){
+	left: 53px;
+	top: 18px;
+	animation-delay: 1s;
+}
+.cloader .cloading div:nth-child(7){
+	left: 70px;
+	top: 10px;
+	animation-delay: 1.2s;
+}
+.cloader .cloading div:nth-child(8){
+	left: 87px;
+	top: 18px;
+	animation-delay: 1.4s;
+}
+@keyframes cloadani{
+	0%{
+		opacity: .3;
+		background-color: rgba(0, 0, 0, .3);
+	}
+	25%{
+		opacity: .7;
+		background-color: rgba(0, 0, 0, .7);
+	}
+	50%{
+		opacity: 1;
+		background-color: rgba(0, 0, 0, 1);
+	}
+	75%{
+		opacity: .7;
+		background-color: rgba(0, 0, 0, .7);
+	}
+	100%{
+		opacity: .3;
+		background-color: rgba(0, 0, 0, .3);
+	}
+}

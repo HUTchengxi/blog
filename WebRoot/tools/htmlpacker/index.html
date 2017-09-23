@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML代码格式化工具</title>
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!-- Bootstrap -->
+    <link href="http://tools.jb51.net/static/skin/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Styles -->
+    <link href="http://tools.jb51.net/static/skin/css/theme.css" rel="stylesheet">
+    <!-- jquery -->
+    <script src="jquery.min.js"></script>
+    <!-- js -->
+    <script src="index.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="index.css" />
+    
+  </head>
+  
+  <body>
+    	<div class="leftBar">
+		<textarea id='source'>/*这里填写代码*/</textarea>
+		</div>
+		<div class="operateLR">
+			<form class="well" style="padding:20px 0 20px 0;">
+				<button class="btn btn-primary"  type='button' value='开始压缩' id="html_compress_btn">开始压缩</button>
+				<br><br>原始长度:<span id="old"></span>
+				<br>压缩后长度:<span id="new"></span>
+				<br>缩小百分比:<span id="range"></span>%
+			</form>
+		</div>
+		<div class="rightBar">
+			<textarea id='result'></textarea>
+		</div>
+  </body>
+</html>
+
+

@@ -1,0 +1,64 @@
+.privset-main{
+	float: right;
+	width: 1169px;
+	min-height: 500px;
+	margin-top: 50px;
+	text-align: center;
+}
+.privset-main h4{
+	text-align: center;
+}
+.privset-main .group{
+	margin-bottom: 10px;
+	position: relative;
+}
+.privset-main .group label{
+	margin-right: 5px;
+}
+.privset-main .group select{
+	width: 100px;
+	height: 29px;
+}
+.privset-main .group input{
+	width: 100px;
+}
+.privset-main .group button{
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.77);
+    color: rgba(255, 255, 255, 0.83);
+    border: 1px solid rgba(0, 0, 0, 0.77);
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: all .1s ease-out;
+}
+.privset-main .group button:hover{
+	background-color: black;
+	color: white;
+	border-color: black;
+}
+.privset-main .group span{
+	position: absolute;
+	color: #27ff00;
+	top: 5px;
+	visibility: hidden;
+}
+.privset-main .group span.glyphicon-remove{
+	color: rgba(169, 37, 37, 0.97);
+}
+.privset-main .group p{
+	color: red;
+	text-align: center;
+	display: none;
+}
+.privset-main .none{
+	display: none;
+}
+.privset-main .group:nth-child(3) input{
+	text-align: center;
+}
+#loader{
+	left: 57%!important;
+	top: 28%!important;
+}

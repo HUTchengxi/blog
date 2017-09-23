@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML代码格式化工具</title>
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!-- Bootstrap -->
+    <link href="http://tools.jb51.net/static/skin/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Styles -->
+    <link href="http://tools.jb51.net/static/skin/css/theme.css" rel="stylesheet">
+     <link rel="stylesheet" href="http://tools.jb51.net/static/jsformat/style.css" rel="stylesheet">
+    <!-- jquery -->
+    <script src="jquery.min.js"></script>
+    
+  </head>
+  
+  <body>
+    	<div id="mainContent" class="tool_content wrapper">
+		<div class="toolName">在线代码格式化</div>
+		    <div class="toolUsing clearfix">
+		    	
+				<form id="codeformat_form" action="" method="POST">
+		        <script type="text/javascript" src="http://tools.jb51.net/static/jsformat/jsbeautify.js"></script>
+				<script type="text/javascript">
+				    function do_js_beautify() {
+				        $("#fjs").html("");
+						var js_source =$('#jsdata').val().replace(/^\s+/, '');
+						if(js_source.length==0)
+							return;
+				        var tabsize = $('#tabsize').val();
+				        tabchar = ' ';
+				        if (tabsize == 1)
+				          tabchar = '\t';
+				        var fjs = js_beautify(js_source, tabsize, tabchar);
+						$("#fjs").val(fjs);
+					}
+					
+				</script>
+				<div class="topBar">
+				    <div class="title">待格式化JavaScript：</div>
+					<div class="resizable-textarea"><span><textarea name="js" id="jsdata" onchange="do_js_beautify()" onkeyup="do_js_beautify()" style="resize:none;" class="resizable processed"></textarea><div class="grippie" style="margin-right: -8px;"></div></span></div>
+				</div>
+				<div class="operateTB form-inline">
+					缩进方式：
+					<select name="tabsize" id="tabsize" class="span2" onchange="do_js_beautify()">
+				          <option value="1">Tab符缩进</option>
+				          <option value="2">2个空格缩进</option>
+				          <option value="4" selected="selected">4个空格缩进</option>
+				          <option value="8">8个空格缩进</option>
+				        </select>
+					<input class="btn btn-small btn-primary" data-loading-text="正在格式化js..." id="format" type="button" onclick="do_js_beautify()" value="格式化">
+					<input class="btn btn-small btn-success" id="copy_format" data-clipboard-target="fjs" type="button" value="复制格式化代码">
+					<input type="button" class="btn btn-success" onclick="save_file();" value="保存文本">
+					<input type="button" class="btn btn-danger" onclick="Empty();" value="清空结果">
+				</div>
+				<div class="bottomBar">
+				    <div class="title">格式化JavaScript：</div>
+					<div class="resizable-textarea"><span><textarea id="fjs" name="fjs" style="resize:none;" class="resizable processed"></textarea><div class="grippie" style="margin-right: -8px;"></div></span></div>
+				</div>        </form>
+				    </div>
+				</div>
+  </body>
+</html>
+
+

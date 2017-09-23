@@ -1,0 +1,49 @@
+.main{
+    margin-top: 101px;
+    opacity: 0;
+}
+.main ul{
+	list-style-type: none;
+}
+.main ul.main-ul li.main-li{
+    border: 1px solid grey;
+    width: 103%
+    margin-left: -40px;
+    margin-bottom: 30px;	
+    position: relative;
+}
+.main .main-ul .front-li{
+	height: 250px;
+}
+.main .main-ul .behind-li{
+	height: 500px;
+}
+.main ul.main-ul li.main-li h3{
+	margin-left: 600px;
+	color: rgba(255, 0, 94, 0.73);	
+}
+.main ul.main-ul li.main-li ul{
+	position: relative;
+	top: 20px;
+}
+.main ul.main-ul li.main-li ul li{
+	float: left;
+	margin-left: 156px;
+	margin-top: 20px;
+	transition: all .5s ease-out;
+}
+.main ul.main-ul li.main-li ul li a img{
+	transition: all .5s ease-out;
+	width: 193px;
+	height: 102px;
+}
+.main .main-ul .main-li ul li a h3{
+    margin-left: 57px;
+    margin-top: 8px;
+}
+.main .main-ul .program-li{
+	height: 430px;
+}
+.main .main-ul li div{
+	display: none; 
+}

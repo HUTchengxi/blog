@@ -1,0 +1,119 @@
+.content-form{
+    border: 1px solid;
+    width: 610px;
+    height: 278px;
+    margin-left: 349px;
+    margin-top: 175px;
+    background-color: rgba(158, 158, 158, 0.19);
+    border: 1px solid rgba(158, 158, 158, 0.19);
+    position: relative;
+    top: 0;
+    transition: top 1s ease-out;
+}
+.content-form h3{
+	text-align: center;
+}
+.content-form div{
+	margin-left: 161px;
+	margin-top: 24px;
+    position: relative;
+}
+.content-form label{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.74);
+}
+.content-form input{
+	height: 31px;
+	width: 184px;
+	font-size: 16px;
+	border: 1px solid rgba(158, 158, 158, 0.53);
+}
+.content-form .valicode-group input{
+	width: 60px;
+}
+.content-form .valicode-group button{
+    width: 74px;
+    height: 31px;
+    margin-left: 29px;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.71);
+    background-color: rgba(0, 173, 255, 0.97);
+    border: 1px solid rgba(0, 173, 255, 0.97);
+}
+.content-form span.glyphicon-remove{
+	color: rgba(169, 37, 37, 0.97);
+	opacity: 0;
+}
+.content-form span.glyphicon-ok{
+	color: #27ff00;
+	opacity: 0;
+}
+.content-form span.infospan{
+	color: red;
+	opacity: 0;
+}
+.content-form .phone-group span.glyphicon-ok{
+	position: absolute;
+	left: 255px;
+	top: 8px;
+}
+.content-form .valicode-group span.glyphicon-ok{
+    position: absolute;
+    left: 130px;
+    top: 8px;
+}
+.btn-group{
+    margin-left: 570px;
+    margin-bottom: 28px;
+    visibility: hidden;
+    opacity: 0;
+}
+.btn-group span{
+	transform: rotateZ(270deg);
+	font-size: 25px;
+	animation: spanani .7s ease-out infinite;
+}
+.btn-group span:nth-child(2){
+    position: relative;
+    left: 33px;
+    top: 16px;
+    font-size: 35px;
+    animation-delay: .2s;
+}
+.btn-group span:nth-child(1){
+    position: relative;
+    font-size: 43px;
+    left: 74.4px;
+    top: 35px;
+    animation-delay: .2s;
+}
+.content-form2,.content-form3{
+	display: none;
+}
+.content .content-form2 span.glyphicon-ok{
+	left: 271px;
+}
+.content .content-form3 span.info{
+    font-size: 21px;
+    margin-left: 210px;
+    position: relative;
+    top: 57px;
+}
+
+@keyframes spanani{
+	0%{
+		opacity: .3;
+	}
+	25%{
+		opacity: .7;
+	}
+	50%{
+		opacity: 1;
+	}
+	75%{
+		opacity: .7;
+	}
+	100%{
+		opacity: .3;
+	}
+}

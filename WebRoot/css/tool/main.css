@@ -1,0 +1,47 @@
+#homehead{
+	opacity: 0;
+}
+.main{
+	opacity: 0;
+	position: relative;
+	top: 51px;
+	margin-left: 27px;
+}
+.main h3{
+	margin-left: 439px;
+	color: rgba(255, 0, 0, 0.73);
+}
+.main table{
+	font-size: 23px;
+	min-width: 870px;
+}
+.main table td{
+	text-align: center;
+}
+.main table tr td span{
+	color: rgba(255, 0, 0, 0.61);
+}
+.main div.btns{
+    position:  relative;
+    top: 49px;
+    left: 685px;
+    width: 240px;
+}
+.main div.btns a{
+	margin-left: 40px;
+	font-size: 18px;
+}
+.main div.btns a:hover{
+	color: red;
+}
+#delmodal .modal-body input{
+	text-align: center;
+	font-size: 19px;
+}
+#delmodal .modal-foot{
+	margin-left: 390px;
+}
+#delmodal .modal-foot button{
+	width: 80px;
+	margin-left: 10px;
+}

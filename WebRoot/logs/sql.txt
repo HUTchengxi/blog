@@ -1,0 +1,223 @@
+#数据库创建
+create database blog;
+use blog;
+
+#管理员表的创建
+create table admin(
+	id int primary key auto_increment,
+	username varchar(20) not null comment "用户名",
+	password varchar(50) not null comment "密码",
+	nickname varchar(20) not null comment "昵称",
+	phone varchar(20) not null comment "手机号码"
+);
+insert into admin(username,password,nickname,phone) values("chengxi","d9922ab4c5d4380fa6106769d45d1c96","成兮","15573311691");
+ 
+#用户注册规定：username不允许用chengxi
+ 
+#blog博客表的创建    xw素材网
+create table blog(
+	id int primary key auto_increment,
+	username varchar(20) not null comment "作者账号",
+	type varchar(20) not null comment "博文类别",
+	pubtype varchar(20) not null comment "发布类别",	
+	pubdate varchar(20) not null comment "发布时间",
+	title varchar(300) not null comment "博文标题",
+	isfirst int default 0 comment "是否置顶", #0不置顶 1置顶
+	content text not null comment "博文内容",
+	author varchar(20) not null comment "博文作者",
+	imgsrc varchar(100) not null comment "博文背景图片",
+	descript varchar(300) not null comment "博客描述"
+);
+ 
+#插入测试数据
+insert into blog (type,pubtype,pubdate,title,content,author,imgsrc) values("html","原创","2017-06-22","html新特性1","iframe取代frameset和frame","成兮","img1.jpg");
+insert into blog (type,pubtype,pubdate,title,content,author,imgsrc) values("html","原创","2017-06-22","html新特性2","iframe取代frameset和frame","成兮","img1.jpg");
+insert into blog (type,pubtype,pubdate,title,content,author,imgsrc) values("html","原创","2017-06-22","html新特性3","iframe取代frameset和frame","成兮","img1.jpg");
+insert into blog (type,pubtype,pubdate,title,content,author,imgsrc) values("html","原创","2017-06-22","html新特性4","iframe取代frameset和frame","成兮","img1.jpg");
+
+select * from blog;
+
+
+#博客相关记录表的映射
+create table blog_info(
+	id int primary key not null comment "映射的blogid",
+	readcount int default 0 comment "阅读量",
+	goodcount int default 0 comment "点赞数",
+	badcount int default 0 comment "踩数",
+	foreign key(id) references blog(id)
+);
+ 
+insert into blog_info values(1,200,404,500);
+insert into blog_info values(2,201,403,501);
+insert into blog_info values(3,202,402,502);
+	
+	
+#实用工具表的创建
+#id title href pubdate pubtype author
+create table tool(
+	id int primary key auto_increment comment "唯一标识",
+	title varchar(300) not null comment "工具作用标题",
+	author varchar(20) not null comment "工具发布人",
+	href varchar(300) not null comment "工具使用链接",
+	pubtype varchar(100) not null comment "工具归类",
+	pubdate varchar(100) not null comment "工具发布时间"
+);
+ 
+insert into tool values(1,"css代码格式化工具","成兮","http://localhost:8080/blog/tools/csspacker/index.html","代码格式化工具","2017-06-27 9:38:00");
+insert into tool values(2,"html代码格式化工具","成兮","http://localhost:8080/blog/tools/htmlpacker/index.html","代码格式化工具","2017-06-27 15:16:00");
+insert into tool values(3,"js代码格式化工具","成兮","http://localhost:8080/blog/tools/jspacker/index.html","代码格式化工具","2017-06-27 15:33:00");
+insert into tool values(4,"html代码输出语言转换工具","成兮","http://localhost:8080/blog/tools/langtrans/index.html","代码语言转换工具","2017-06-27 15:45:00");
+insert into tool values(5,"meta标签自动生成工具","成兮","http://localhost:8080/blog/tools/metaautocreate/index.html","代码语言转换工具","2017-06-27 15:45:00");
+insert into tool values(6,"http状态码详解","成兮","http://localhost:8080/blog/tools/httpscode/index.html","详解教程","2017-06-27 16:25:00");
+insert into tool values(7,"address加密工具","成兮","http://localhost:8080/blog/tools/addrtrans/index.html","加密工具","2017-06-27 16:25:00");
+insert into tool values(8,"按钮样式生成工具","成兮","http://localhost:8080/blog/tools/btnautocss/index.html","样式生成工具","2017-06-27 17:48:00");
+ 
+
+#用户评分表
+create table score_info(
+	blogid int not null comment "对应的博客id",
+	username varchar(20) not null comment "评分用户",
+	score int not null comment "评分，1表示good，-1表示bad",
+	foreign key(blogid) references blog(id)
+);
+	
+delete from score_info;
+update blog_info set goodcount = 0;
+update blog_info set badcount = 0;
+
+#评论表
+create table comment_info(
+	id int not null comment "当前占楼层",
+	blogid int not null comment "评论的博客对应的id",
+	username varchar(20) not null comment "评论用户账号",
+	nickname varchar(20) not null comment "评论用户昵称",
+	comuser varchar(20) comment "回复的用户账号",
+	comnick varchar(20) comment "回复的用户昵称",
+	content text not null comment "用户评论",
+	date varchar(50) not null comment "发表时间",
+	foreign key(blogid) references blog(id)
+);
+#添加发表的时间
+#测试数据
+insert into comment_info values(1,1,"chengxi","成兮","cheng","成","谢谢","2017-07-04 08:30:05");
+insert into comment_info values(2,1,"cheng","成兮","chengxi","成","谢谢","2017-07-04 08:30:05");
+insert into comment_info(id,blogid,username,nickname,content,date) values(3,1,"chengxi","成兮","谢谢","2017-07-04 08:30:05");
+insert into comment_info(id,blogid,username,nickname,content,date) values(4,1,"cheng","成","谢谢","2017-07-04 08:30:05");
+insert into comment_info values(5,1,"chengxi","成兮","cheng","成","谢谢","2017-07-04 08:30:05");
+insert into comment_info values(6,1,"chengxi","成兮","cheng","成","谢谢","2017-07-04 08:30:05");
+insert into comment_info values(7,1,"chengxi","成兮","cheng","成","谢谢","2017-07-04 08:30:05");
+ 
+#留言表
+create table guest(
+	id int primary key auto_increment not null comment "当前占楼层",
+	username varchar(20) not null comment "留言用户账号",
+	nickname varchar(20) not null comment "留言用户昵称",
+	comuser varchar(20) comment "回复的用户账号",
+	comnick varchar(20) comment "回复的用户昵称",
+	content text not null comment "用户留言",
+	date varchar(50) not null comment "留言时间",
+	goodcount int not null comment "留言点赞数",
+	badcount int not null comment "留言踩数"
+);
+
+#留言点赞表
+create table guest_score(
+	guestid int not null comment "对应的留言id",
+	username varchar(20) not null comment "评论留言用户",
+	score int not null comment "评分，1表示good，-1表示bad",
+	foreign key(guestid) references guest(id)
+);
+
+#相册表
+create table my_photo(
+	id int primary key auto_increment comment "相册id",
+	username varchar(20) not null comment "相册所有者username",
+	imgsrc varchar(100) not null comment "相册照片存放位置，根目录为images/my_photo/photos/",
+	title varchar(50) not null comment "相册标题",
+	descript varchar(100) not null comment "相册说明"
+);
+insert into my_photo(username,imgsrc,title,descript) values("chengxi","1.jpg","title","descrption for my img");
+insert into my_photo(username,imgsrc,title,descript) values("chengxi","2.jpg","title","descrption for my img");
+insert into my_photo(username,imgsrc,title,descript) values("chengxi","3.jpg","title","descrption for my img");
+insert into my_photo(username,imgsrc,title,descript) values("chengxi","4.jpg","title","descrption for my img");
+insert into my_photo(username,imgsrc,title,descript) values("chengxi","5.jpg","title","descrption for my img");
+insert into my_photo(username,imgsrc,title,descript) values("chengxi","6.jpg","title","descrption for my img");
+insert into my_photo(username,imgsrc,title,descript) values("chengxi","7.jpg","title","descrption for my img");
+insert into my_photo(username,imgsrc,title,descript) values("chengxi","8.jpg","title","descrption for my img");
+insert into my_photo(username,imgsrc,title,descript) values("chengxi","9.jpg","title","descrption for my img");
+insert into my_photo(username,imgsrc,title,descript) values("chengxi","10.jpg","title","descrption for my img");
+
+
+#登录状态表
+create table logstate(
+	id int primary key auto_increment not null comment "唯一标识",
+	username varchar(20) not null comment "记录的账号",
+	logdate varchar(50) not null comment "登录时间",
+	attime int not null comment "在线时长，单位为分钟",
+	ip varchar(25) not null comment "登录ip地址",
+	pos varchar(100) not null comment "登录地理位置"
+);
+
+#权限设置表
+create table privset(
+	liid int not null comment "1-7表示7个li的权限密码设置",
+	haspass int not null comment "1表示有密码，0表示无密码",
+	password varchar(32) default null comment "密码"
+);
+
+
+#一路走来表
+create table longway(
+	id int primary key auto_increment comment "唯一标识",
+	title varchar(50) not null comment "描述标题",
+	content varchar(500) not null comment "描述日记",
+	pubtime varchar(30) not null comment "经历时间",
+	imgsrc varchar(200) comment "可选图片，默认images/test/longwaybg.jpg",
+	priv int not null comment "1为公开，-1为隐私"
+);
+insert into longway(title,content ,pubtime,priv) values("万事开头难","开始开发我的博客，到各处寻找素材模板，最终决定在无任何模板参照的情况下手动编写前后端","2017-06-15",1);
+insert into longway(title,content ,pubtime,priv) values("1.0版本的完成","随着实训的结束，我完成了博客的1.0版本并初次展示，总体而言界面太丑，功能挺多","2017-07-10",1);
+insert into longway(title,content ,pubtime,priv) values("巧了，段亮大神","机缘巧合下看到了段亮大神的博客，借用其前端参照，对个人博客进行大改","2017-09-15",1);
+insert into longway(title,content ,pubtime,priv) values("原来有模板美化就是这么简单","经历两周时间，个人博客2.0版本更新，前端美化许多","2017-09-31",1);
+insert into longway(title, content ,pubtime,priv) values("是时候加点更加高大上的东西了","将普通用户界面与管理员使用进行项目独立分离，并实现同域SSO单点登录，减少不必要的校验麻烦","2017-10-11",1);
+
+
+
+#blog博客表2.0版本更新
+create table blog_main(
+	id int primary key auto_increment comment "博客标识id",
+	username varchar(20) not null comment "发布用户名",
+	nickname varchar(20) not null comment "发布用户昵称",
+	title varchar(50) not null comment "博客标题",
+	content text not null comment "博客内容",
+	imgsrc varchar(100) not null comment "背景标题",
+	pubtime varchar(30) not null comment "发布时间",
+	pubtype varchar(20) not null comment "发布类型, front,web,program,sql,seo,total",
+	readcount int default 0 comment "阅读量",
+	goodcount int default 0 comment "点赞量",
+	badcount int default 0 comment "踩量",
+	isfirst int default 0 comment "是否置顶，1表示置顶"
+);
+
+
+#blog_tags关键字查询表
+create table blog_tags(
+	blogid int not null comment "关键字对应博客id",
+	tagid int not null comment "关键字对应的id",
+	tag varchar(50) not null comment "关键字",
+	foreign key(blogid) references blog_main(id)
+);
+
+#所有tags表
+create table tags(
+	id int primary key auto_increment comment "关键字唯一标识",
+	tagname varchar(50) not null comment "关键字"
+);
+insert into tags(tagname) values("html"),("css"),("js"),("java"),("ssm"),("ssh"),("tomcat"),("web开发"),("学习指导教程"),("服务器"),("api架构"),("大数据"),("面试题"),("特效"),("seo");
+
+
+
+
+
+
+

@@ -1,0 +1,220 @@
+1.使用vue.js
+		1>.v-html：用于输出html语句代码，即绑定的内容为包含标签的html格式数据
+			<div id="demo1" v-html="message"></div>
+			<script>
+				var vue1 = new Vue({
+					el: "#demo1",
+					data: {
+						message: :"<h1>你好Vue</h1>"
+					}
+				});
+			</script>
+		2>.v-model：实现数据的双向绑定
+			<div id="demo1">
+				<p>{{message}}</p>
+				<input type="text" v-model="message" />
+			</div>
+			<script>
+				var vue1 = new Vue({
+					el: "#demo1",
+					data: {
+						message: "hello vue"
+					}
+				});
+			</script>
+		3>.v-if：指定性显示，值为false则无该dom元素，为true才会自动创建该节点
+			<div id="dem1">
+				<p v-if="seen">你可以看到我了</p>
+				<p v-else>你还是看我吧</p>
+			</div>
+			<script>
+			var test = new Vue({
+				el: "#dem1",
+				data: {
+					seen: false
+				}
+			});
+			</script>
+		4>.v-bind: 单向绑定数据  可以省略成引号":"：
+			<div id="dem1">
+				<div v-bind:id="id" v-bind:class="testclass" :name="name">vue测试元素</div>
+			</div>
+			<script>
+				var test = new Vue({
+					el: "#dem1",
+					data: {
+						id: "vueid",
+						testclass: "vueclass",
+						name: "vuename"
+					}
+				});
+			</script>
+		5>.v-on：单向绑定相关处理事件 可以省略成@：
+			<div id="dem1">
+				<div v-on:click="doclick">test1</div>
+				<div @click="doclick">test2</div>
+			</div>
+			<script>
+				var test = new Vue({
+					el: "#dem1",
+					methods: {
+						doclick: function(){
+							alert("通过vue.js处理的点击事件");
+						}
+					}
+				});
+			</script>
+		6>.filter过滤器的使用：
+			<div id="dem1">
+				<div v-bind:class="testclass | filt">hello</div>
+			</div>
+			<script>
+				var test = new Vue({
+					el: "#dem1",
+					data: {
+						testclass: "helloclass"
+					},
+					filters: {
+						filt: function(value){
+							return value.charAt(0).toUpperCase() + value.slice(1);
+						}
+					}
+				});
+			</script>
+			//使用过滤器的两种方式：
+				1.{{message | filtername}}
+				2,v-bind:class="testclass | filtername"
+				3.:class="testclass | filtername"
+		7>.实例化Vue对象时获取设置对应的属性和一般的对象是一样的，不过如果想要获取el/data/methods/filters之类的属性就需要
+		添加$前缀，用于和一般的属性进行区分
+		8>.v-else-if: 一般跟随v-if和v-else并且其后通常用的是表达式而不是直接一个变量比如type=="java"之类的
+		9>.v-show：其效果和v-if差不多，不过实现原理不一样，v-if是直接不生成dom元素，而v-show不管怎样都生成dom元素，只是
+		如果为false的话就display:none隐藏掉了
+		10>.v-for：循环语句，采用site in sites格式语句进行迭代循环输出数据  1.迭代数组
+			<div id="dem1">
+				<ul>
+					<li v-for="site in sites">
+						{{ site.name }}
+					</li>
+				</ul>
+			</div>
+			<script>
+				var test = new Vue({
+					el: "#dem1",
+					data: {
+						sites: [
+							{name: "chengxi"},
+							{name: "yuanfen"},
+							{name: "wuyue"}
+						]
+					}
+				});
+			</script>
+												2.迭代对象：
+			<div id="dem1">
+				<ol>
+					<li v-for="val in obj">
+						{{	val }}
+					</li>
+				</ol>
+			</div>
+			<script>
+				var test = new Vue({
+					el: "#dem1",
+					data: {
+						obj: {
+							name: "成兮",
+							age: 20
+						}
+					}
+				});
+			</script>
+												3.通过键值对来进行对象迭代:
+			<li v-for="(val, key) in obj">
+				{{key}}--->{{val}}
+			</li>
+			这里要注意的是，key键名在后面，val键值在前面
+											4.迭代索引：
+			<li v-for=(val, key, index) in obj">
+				....
+			</li>
+											5.迭代整数：
+			<li v-for="n in 10">
+			{{n}}
+			</li>
+	11>.可以在{{...}}中对属性进行相关的操作
+		<div id="dem1">
+			{{message.split('').reverse().join('')}}
+		</div>
+		<script>
+			var test = new Vue({
+				el: "#dem1",
+				data: {
+					message: "hello"
+				}
+			});
+		</script>
+	12>.compute和methods属性：两个都可以实现相同的效果，不过compute会进行缓存；只有相关依赖发生改变时才会重新取值，
+	而methods在每次重新渲染时，总会重新调用执行
+	13>.computed中的方法依赖于vue实例，当该实例发生改变时，computed也会更新
+	14>.computed默认值提供了getter方法，默认定义的方法就是getter方法，如果想要定义setter方法，就需要进行显示定义
+		computed: {
+			site: {
+				get: function(){
+					return this.message.split("").reverse().join("");
+				},
+				set: function(val){
+					this.message = val;
+				}
+			}
+		}
+		调用setter方法的方式：vuetest.site = "hello world vue js";
+		当进行调用setter方法时，对应的数据也会被进行更新。
+	15>.动态切换设置class：
+		<div id="demo1">
+			<div v-bind:class="{active: isactive}"></div>
+		</div>
+		<script>
+			var test = new Vue({
+				el: "#demo1",
+				data: {
+					isactive: false
+				}
+			});
+		</script>
+		表示的意思为：当isactive为false时，则啥都不干；当设置为true时，则设置class=active
+	16>.也可以直接一次性设置成一个obj对象
+		<div id="demo1">
+			<div v-bind:class="clsobj"></div>
+		</div>
+		<script>
+			var test = new Vue({
+				el: "#demo1",
+				data: {
+					clsobj: {
+						active: false
+					}
+				}
+			});
+		</script>
+		作用同上
+	17>.v-bind:style用于动态设置指定的样式
+		<div id="demo1">
+			<div v-bind:style="{color: activecolor}"></div>
+		</div>
+		<script>
+			var test = new Vue({
+				el: "#demo1",
+				data: {
+					activecolor: "red"
+				}
+			});
+		</script>
+	18>.使用v-model.lazy可以指定双向绑定发生在change事件中，默认的改变事件是keyup事件
+	19>.使用v-model.number可以自动将用户输入的数据转换成数字类型
+	20>使用v-model.trim可以自动过滤掉输入的字符串两边的空格
+	21>.component定义组件；directive定义自定义指令
+	22>.
+
+	
+	自定义组件没有写完

@@ -1,0 +1,113 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-size: cover;
+}
+#homehead{
+	opacity: 0;
+}
+.main{
+	z-index: 100;
+    position: relative;
+    top: 51px;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+}
+.main .article{
+	/*background:-webkit-linear-gradient(left, rgba(158, 158, 158, 0.55), rgba(232, 224, 224, 0.05), rgba(158, 158, 158, 0.55));      webkit核心浏览器兼容代码*/  
+  	/*background:-o-linear-gradient(left, rgba(158, 158, 158, 0.55), rgba(232, 224, 224, 0.05), rgba(158, 158, 158, 0.55));                Opera浏览器兼容代码*/  
+ 	/*background:-moz-linear-gradient(left, rgba(158, 158, 158, 0.55), rgba(232, 224, 224, 0.05), rgba(158, 158, 158, 0.55));                   Firefox 浏览器兼容代码*/  
+ 	/*background: -ms-linear-gradient(left,rgba(158, 158, 158, 0.55), rgba(232, 224, 224, 0.05), rgba(158, 158, 158, 0.55));   */
+ 	/*background:linear-gradient(to rightright, rgba(158, 158, 158, 0.55), rgba(232, 224, 224, 0.05), rgba(158, 158, 158, 0.55));             标准语法要放在最后 */  
+ 	background-color: white;
+    width: 750px;
+    min-height: 900px;
+    border: 1px solid green;
+    border-radius: 15px;
+    position: relative;
+    margin-left: 287px;
+    margin-top: 60px;
+    word-break: break-all;
+}
+.main .article h3{
+	text-align: center;
+	color: red;
+}
+.main .article h4{
+	position: relative;
+	left: 329px;
+}
+.main .article h4 span{
+	color: red;
+}
+.main .article h5{
+	text-align: center;
+}
+.main .article article{
+	text-indent: 2em;
+ 	font-size: 20px;
+}
+
+.main .article .score{
+	height: 100px;
+	width: 340px;
+	position: relative;
+	top: 20px;
+	left: 222px;
+}
+.main .article .score div{
+	float: left;
+	margin-left: 28px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid grey;
+	border-radius: 25px;
+}
+.main .article .score div.infodiv{
+	margin-left: 0;
+	margin-top: 25px;
+	border: 0;
+	visibility: hidden;
+	opacity: 1;
+}
+.main .article .score div.goodinfo{
+	color: rgba(255, 165, 0, 1);
+}
+.main .article .score div.badinfo{
+	color: rgba(0, 0, 0, 1);
+}
+.main .article .score div a{
+    display: inline-block;
+    margin-top: 11px;
+    margin-left: 12px;
+    font-size: 24px;
+    color: rgba(255, 165, 0, 0.76);
+}
+.main .article .score div.good a:hover{
+	color: rgba(255, 165, 0, 1);
+}
+.main .article .score div.bad a{
+	color: rgba(0, 0, 0, 0.76);
+}
+.main .article .score div.bad a:hover{
+	color: rgba(0,0,0,1);
+}
+.main .btns{
+    position: relative;
+    top: 178px;
+    left: 846px;
+    width: 189px;
+    z-index: 100;
+}
+.main .btns a{
+    display: inline-block;
+    width: 58px;
+    text-align: center;
+    margin-right: 35px;
+}
+.main .btns a:hover{
+	color: red;
+}

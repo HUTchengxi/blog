@@ -1,0 +1,65 @@
+.info-content{
+	float: right;
+	width: 1169px;
+	min-height: 500px;
+	margin-top: 50px;
+	text-align: center;
+	opacity: 0;
+	display: none;
+}
+.info-content h4{
+	text-align: center;
+}
+.info-content .info-main{
+	margin-top: 25px;
+}
+.info-main div:nth-child(1){
+	margin-right: 132px;
+}
+.info-content .info-main div label{
+	font-size: 17px;
+	margin-right: 20px;
+}
+.info-main div{
+	margin-bottom: 20px;
+}
+.info-main div div{
+	display: inline-block;
+	margin-left: 28px;
+}
+.info-main div div a{
+	font-size: 17px;
+	margin-right: 15px;
+}
+.info-main .hidelink{
+	visibility: hidden;
+}
+.pass-mod, .mod-in{
+	height: 0;
+	display: none;
+	color: rgba(0, 0, 0, 0.65);
+	position: relative;
+}
+.mod-in{
+	margin-left: 255px;
+}
+.pass-mod span, .mod-in span{
+	visibility: hidden;
+}
+.pass-mod span.glyphicon-remove, .mod-in span.glyphicon-remove{
+	left: -18px;
+	color: rgba(169, 37, 37, 0.97);
+}
+.pass-mod span.glyphicon-ok, .mod-in span.glyphicon-ok{
+	color: #27ff00;
+}
+.pass-mod div:nth-child(3), .mod-in div:nth-child(3), .nick-mod div:nth-child(2), .phone-mod div:nth-child(2){
+    position: absolute;
+    width: 100%;
+    left: -28px;
+    top: -34px;
+    text-align: center;
+    font-size: 17px;
+    color: red;
+    visibility: hidden;
+}

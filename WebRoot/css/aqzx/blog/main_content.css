@@ -1,0 +1,74 @@
+.blog-main{
+	float: right;
+	width: 1169px;
+	min-height: 500px;
+	margin-top: 50px;
+	text-align: center;
+}
+.blog-main ul{
+	list-style-type: none;
+	margin-left: -17px;
+}
+.blog-main ul li{
+	float: left;
+	margin-left: -2px;
+	font-size: 17px;
+	border: 1px solid rgba(128, 128, 128, 0.53);
+	height: 27px;
+	width: 82px;
+	transition: all .2s ease-out;
+}
+.blog-main ul li a:hover{
+	text-decoration: none;
+}
+.blog-main ul li.clilink{
+	background-color: #0decec;
+}
+.blog-main ul li:hover{
+	background-color: #0decec;
+}
+
+.blog-main .main-content{
+	margin-top: 50px;
+	width: 1125px;
+	margin-left: 19px;
+}
+.blog-main .main-content .content{
+	border: 1px solid ;
+	margin-bottom: 10px;
+}
+.blog-main .main-content .content h5{
+	min-width: 340px;
+    text-align: left;
+    margin-left: 3px;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 17px;
+}
+.blog-main .main-content h5 a{
+	color: red;
+}
+.blog-main .main-content .content h5 span{
+	margin-left: 65px;
+}
+.blog-main .main-content .content div.mod{
+	display: inline-block;
+	float: right;
+	margin-top: -40px;
+	height: 40px;
+	line-height: 40px;
+}
+.blog-main .main-content .content div.mod a{
+	font-size: 16px;
+	margin-right: 10px;
+}
+.blog-main .mod-page{
+	margin-top: 20px;
+}
+.blog-main .mod-page a{
+	margin-right: 8px;
+}
+.blog-main .main-content div.none{
+    position: relative;
+    top: 20px;
+    margin-bottom: 53px;
+}

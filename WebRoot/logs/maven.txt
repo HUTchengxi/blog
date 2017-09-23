@@ -1,0 +1,52 @@
+1.mvn archetype:generate -DgroupId-com.test.maven -DartifactId-test1 -DpackageName-com.test.maven.test1：创建一个maven项目
+
+2.mvn compile: 编译源代码
+
+3.mvn test-compile: 编译测试代码
+
+4.mvn test：运行应用程序中的单元测试
+
+5.mvn site：生成项目相关信息的网站
+
+6.mvn clean：清除目标目录中的生成结果
+
+7.mvn package：依据项目生成jar文件
+
+8.mvn install：在本地仓库中安装jar文件
+
+9.mvn eclipse:eclipse：生成Eclipse项目文件
+
+10.mvn install -Dmaven.test.skip=true：忽略测试文档编译
+
+11.mvn install:install-file -Dfile=D:\maven\antlr\antlr\2.7.7\antlr-2.7.7.jar -DgroupId=antlr -DartifactId=antlr -Dversion=2.7.7 -Dpackaging=jar：手动添加jar包到本地仓库中
+
+12.mvn eclipse:eclipse：将一个maven项目编译成一个eclipse项目
+
+13.mvn eclipse:clean：将编译后的eclipse项目还原成maven项目，然后在mvn eclipse:eclipse编译，就可以完成改变包的依赖
+
+14.修改本地仓库的路径位置：打开maven/apache-maven/conf/setting.xml文件，找到localRepository，然后修改他的值为你要修改的本地仓库的位置即可
+
+15.<dependency><scope>添加jar包依赖的范围：compile/test/provided/runtime：
+	compile：默认使用该依赖，对编译、测试、运行三种classpath都有效
+	test：只对测试有效，比如junit
+	provided：在运行时无效，对编译和测试有效
+	runtime：对测试和运行有效，在编译时无效
+	
+16.mvn help:effective-pom：查看真正pom的结构，为超级pom与本pom的叠加
+
+17.mvn site：生成站点信息
+
+18.mvn cobertura:cobertura：测试代码的覆盖率的统计信息
+
+19.上传文件时，如果在上传的过程中用户取消上传时，如何删除之前上传的文件数据：可以先将文件上传到临时文件目录，当文件全部上传完成时，然后就将文件从临时目录中保存到上传的真实路径中
+
+
+
+
+-8-17
+	1.文字过长使用如下可以自动用省略号代替
+				text-overflow/overflow/white-space
+	2.动画特效，fadeInLeft和fadeInRight
+		transform: translateX(20px);;;;translateX(0);
+		
+		

@@ -1,0 +1,14 @@
+.headshow{
+	text-align: center;
+	width: 100%;
+	z-index: 999;
+	background-color: white;
+	position: absolute;
+	background-image: url(../../images/myphoto/head_bg.jpg);
+	background-size: cover; 
+	background-repeat: no-repeat;
+	font-family: cursive;
+}
+#works{
+	min-height: 600px;
+}

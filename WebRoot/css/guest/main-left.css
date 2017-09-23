@@ -1,0 +1,165 @@
+.main{
+		margin-top: 80px;
+		min-height: 620px;
+		width: 100%;
+}
+.main-left{
+	width: 60%;
+	min-height: 100%;
+	margin-left: 70px;
+	margin-bottom: 100px;
+	float: left;
+}
+.main-left .guest span{
+    display: inline-block;
+    width: 39px;
+    height: 110px;
+    position: relative;
+    top: -65px;
+    font-size: 20px;
+    text-align: center;
+    color: red;
+    margin-left: 10px;
+}
+.main-left .guest textarea,.commitbar textarea{
+    border-color: #e74851;
+    border-radius: 12px;
+    color: rgba(128, 128, 128, 0.82);
+}
+.main-left .guest a,.commitbar a{
+    display: inline-block;
+    position: relative;
+    top: 40px;
+    right: 103px;
+}
+.main-left .guest button,.commitbar button{
+	background-image: url(../../images/guest/btn_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: transparent;
+	width: 102px;
+	height: 30px;
+	border: 0;
+}
+.main-left .guest button:hover,.commitbar button:hover{
+	background-image: url(../../images/guest/btn_hover_bg.png);
+}
+.main-left .guest p,.commitbar p{
+    width: 109px;
+    margin-left: 320px;
+    margin-top: -18px;
+    text-align: center;
+    color: red;
+    display: none;
+}
+.commitbar p{
+	margin-top: 10px;
+}
+.main-left .guestlist{
+	margin-top: 25px;
+}
+.main-left .guestlist .listtop{
+	width: 642px;
+}
+.main-left .guestlist span.pl{
+    border: 1px solid #e74851;
+    font-size: 16px;
+    color: #e74851;
+    width: 66px;
+    height:  30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom: 0;
+}
+.main-left .guestlist span.tj{
+	font-size: 16px;
+	color: #e74851;
+	font-weight: bolder;
+	float: right;
+}
+.main-left .guestlist p.hr{
+    background-color: red;
+    height: 1px;
+    width: 575px;
+    margin-left: 66px;
+}
+.main-left .guestlist p:nth-child(4){
+    width: 75px;
+    font-size: 16px;
+    text-align: right;
+    color: #e74851;
+}
+.main-left .guestlist .listcontent ol{
+	list-style-type: none;
+}
+.main-left .guestlist .listcontent ol li{
+	margin-bottom: 23px;
+}
+.listcontent .maincontent .face{
+	background-image: url(../../images/guest/guest_man.gif);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 42px;
+	height: 42px;
+	border-radius: 22px;
+	margin-left: -40px;
+	float: left;
+}
+.listcontent .maincontent .face:hover{
+	cursor: pointer;
+}
+.listcontent .maincontent .content .personinfo{
+	position: relative;
+	width: 603px;
+}
+.listcontent .maincontent .content .personinfo p{
+	margin-left: 20px;
+	color: rgba(128, 128, 128, 0.68);
+}
+.listcontent .maincontent .content .personinfo p span.nickspan{
+	color: #e74851;
+}
+.listcontent .maincontent .content .personinfo p span.comspan{
+	color: red;
+}
+.listcontent .maincontent .content .personinfo p span.timespan{
+	position: absolute;
+	right: 0;
+}
+.listcontent .maincontent .content .pubcontent p{
+	text-indent: 2em;
+	width: 603px;
+	word-break: break-all;
+	margin-left: 5px;
+}
+.listcontent .maincontent .content .modgroup{
+	width: 603px;
+	text-align: right;
+}
+.listcontent .maincontent .content .modgroup a{
+	margin-right: 20px;
+	color: rgba(128, 128, 128, .62);
+}
+.listcontent .maincontent .content .modgroup a:hover{
+	color: rgba(128,128,128,.85);
+	text-decoration: none;
+}
+.listcontent .maincontent .content .modgroup a:nth-child(1):hover{
+	text-decoration: underline;
+}
+.listcontent .maincontent .content .commitbar{
+	display: none;
+	height: 0;
+	overflow: hidden;
+}
+.listcontent a.getmore{
+    margin-left: 280px;
+    color: rgba(128, 128, 128, 0.71);
+}
+.listcontent a.getmore:hover{
+	color: rgba(128,128,128,.87);
+	text-decoration: none;
+}

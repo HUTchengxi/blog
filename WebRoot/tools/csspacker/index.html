@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS代码格式化工具</title>
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!-- Bootstrap -->
+    <link href="http://tools.jb51.net/static/skin/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Styles -->
+    <link href="http://tools.jb51.net/static/skin/css/theme.css" rel="stylesheet">
+    <!-- jquery -->
+    <script src="jquery.min.js"></script>
+    <!-- js -->
+    <script src="index.js"></script>
+    
+  </head>
+  
+  <body>
+    	<form role="form" onsubmit="return false;">
+          <div class="form-group">
+            <label class="sr-only" for="code">待处理CSS代码</label>
+            <textarea class="form-control" rows="10" placeholder="待压缩、格式化的CSS代码" id="code"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" onClick="CSS('pack');">高级压缩</button>
+            <button type="submit" class="btn btn-primary" onClick="CSS('packNor');">普通压缩</button>
+            <button type="submit" class="btn btn-primary" onClick="CSS('format');">格式化</button>
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="packer">处理后CSS代码</label>
+            <textarea class="form-control" rows="10" placeholder="处理后的CSS代码" id="packer"></textarea>
+          </div>
+        </form>
+  </body>
+</html>

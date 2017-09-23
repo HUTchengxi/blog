@@ -1,0 +1,84 @@
+<div class="main">
+	<div class="main-title">
+		<input type="text" class="title" placeholder="在此输入你的标题..." />
+	</div>
+	<div class="main-btn">
+		<button type="button" class="publish">发表博客</button>
+	</div>
+	<script id="myEditor" type="text/plain" style="width:116.7%;height:500px;"></script>
+	<div class="main-choose">
+		<div class="choose-descript">
+			<h4 style="margin-left: -9px;">输入博客描述</h4>
+			<textarea rows="5" cols="50" class="descript"></textarea>
+		</div>
+		<div class="choose-title">
+			<h4>文章设置</h4>
+		</div>
+		<div class="exit-btn">
+			<a href="javascript:void(0);" class="exit" title="点击关闭">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+		</div>
+		<div class="choose-type">
+			<label for="pubtype">博文类别:</label>
+			<select name="pubtype" class="pubtype">
+				<option value="front">前端开发</option>
+				<option value="web">后端框架</option>
+				<option value="program">编程语言</option>
+				<option value="sql">数据库</option>
+				<option value="seo">性能优化</option>
+				<option value="total">经验总结</option>
+			</select>
+		</div>
+		<div class="choose-pubtype">
+			<label for="isfirst">博客等级:</label>
+			<select name="isfirst" class="isfirst">
+				<option value="first">置顶</option>
+				<option value="normal">普通</option>
+			</select>
+		</div>
+		<div class="choose-keywords">
+			<label for="keywords">关键查询:</label>
+			<ul class="clearfix">
+				<!-- 
+				 <li><input type="checkbox" name="keywords" class="keywords" value="html" />js</li>
+				 -->
+			</ul>
+		</div>
+		<div class="choose-imgsrc">
+			<label for="imgsrc">搭配图片:</label>
+			<select name="imgsrc" class="imgsrc">
+				<option value="img1">夕阳晚霞</option>
+				<option value="img2">二月秋霜</option>
+				<option value="img3">清新女生</option>
+				<option value="img4">夜映星空</option>
+				<option value="img5">虚头巴脑</option>
+				<option value="img6">碧海暗涌</option>
+				<option value="img7">平凡之路</option>
+				<option value="img8">孤帆远影</option>
+			</select>
+		</div>
+		<div class="img-skim">
+			<label>图片预览</label>
+			<img src="images/blog/contentbg/img1.jpg" title="夕阳晚霞" />
+		</div>
+		<div class="pub-btn">
+			<button type="button" class="declear">取消</button>
+			<button type="button" class="publish">发布</button>
+		</div>
+	</div>
+	<!-- 加载动画特效 -->
+	<div class="czhezhao"></div>
+	<div class="cloader">
+		<div class="cloading">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+</div>

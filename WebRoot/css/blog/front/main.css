@@ -1,0 +1,20 @@
+.main{
+	position: relative;
+	width: 1007px;
+	top: 60px;
+}
+.main h3{
+	margin-left: 550px;
+}
+.main table{
+    position: relative;
+    left: 303px;
+    width: 750px;
+}
+.main table tr td{
+	text-align: center;
+	font-size: 23px;
+}
+.main table tr td span{
+	color: red;
+}

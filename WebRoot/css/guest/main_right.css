@@ -1,0 +1,168 @@
+body{
+	background-color: #efefef;
+}
+.main-right{
+    width: 555px;
+    position: absolute;
+    left: 760px;
+    top: 260px;
+    /* fixed top=60px */
+}
+.main-right .myguesttop{
+	height: 63px;
+}
+.myguesttop .pj{
+	border: 1px solid #e74851;
+    font-size: 16px;
+    color: #e74851;
+    width: 66px;
+    height:  30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom: 0;
+}
+.myguesttop .tj{
+	font-size: 16px;
+	color: #e74851;
+	font-weight: bolder;
+	float: right;
+}
+.myguesttop .hr{
+	background-color: red;
+    height: 1px;
+    width: 492px;
+    margin-left: 66px;
+}
+.myguesttop p:nth-child(4){
+    width: 75px;
+    font-size: 16px;
+    text-align: right;
+    color: #e74851;
+}
+
+.myguestcontent ol{
+	list-style-type: none;
+}
+.myguestcontent ol li{
+	margin-bottom: 23px;
+}
+.myguestcontent{
+	margin-top: 11px;	
+}
+.myguestcontent ol .maincontent .face{
+	background-image: url(../../images/guest/guest_man.gif);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 42px;
+	height: 42px;
+	border-radius: 22px;
+	margin-left: -40px;
+	float: left;
+}
+.myguestcontent ol .maincontent .face:hover{
+	cursor: pointer;
+}
+.myguestcontent ol .maincontent .content{
+	position: relative;
+}
+.myguestcontent .maincontent .content .personinfo p{
+	margin-left: 20px;
+	color: rgba(128,128,128,.68);
+}
+.myguestcontent .maincontent .content .personinfo p span.nickspan{
+	color: #e74851;
+}
+.myguestcontent .maincontent .content .personinfo p span.comspan{
+	color: red;
+}
+.myguestcontent .maincontent .content .personinfo p span.timespan{
+	position: absolute;
+	right: 0;
+}
+.myguestcontent .maincontent .content .pubcontent p{
+	text-indent: 2em;
+	width: 511px;
+	word-break: break-all;
+	margin-left: 5px;
+}
+.myguestcontent .maincontent .content .modgroup{
+	width: 536px;
+	text-align: right;
+}
+.myguestcontent .maincontent .content .modgroup a{
+	margin-right: 14px;
+	color: rgba(128, 128, 128, .62);
+}
+.myguestcontent .maincontent .content .modgroup a:hover{
+	color: rgba(128,128,128,.85);
+	text-decoration: none;
+}
+.main-right .modpage{
+	text-align: center;
+}
+.main-right .modpage a{
+	margin-left: 26px;
+}
+.main-right .modpage span{
+    left: 11px;
+    font-size: 23px;
+    font-weight: 500;
+    position: relative;
+}
+.main-right .righthr{
+    background-color: rgba(128, 128, 128, 0.18);
+    margin-top: 11px;
+    font-size: 20px;
+    text-align: center;
+    font-family: cursive;
+    height: 35px;
+    line-height: 35px;
+    color: rgba(0, 0, 0, 0.64);
+}
+.main-right .hotguest{
+	margin-top: 34px;
+}
+.main-right .hotguest .tj{
+	font-size: 16px;
+	color: #e74851;
+	font-weight: bolder;
+	float: right;
+}
+.main-right .hotguest .modpage a{
+	border: 1px solid;
+	border-radius: 20px;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	display: inline-block;
+}
+.main-right .hotguest .modpage a:hover{
+	text-decoration: none;
+	background-color: rgba(128, 128, 128, 0.3);
+}
+.main-right .hotguest .alinkhover{
+	background-color: rgba(128, 128, 128, 0.3);
+}
+.main-right .hotguest .myguestcontent{
+	width: 565px;
+	min-height: 80px;
+	overflow: hidden;
+}
+.main-right .hotguest .myguestcontent .contentcontainer{
+	width: 1735px;
+	position: relative;
+}
+.main-right .hotguest .myguestcontent ol li .maincontent{
+	position: relative;
+}
+.main-right .contentcontainer ol li{
+	width: 565px;
+	float: left;
+}
+.hotguest .myguestcontent ol .maincontent{
+	width: 520px;
+}

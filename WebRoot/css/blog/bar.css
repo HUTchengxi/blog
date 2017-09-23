@@ -1,0 +1,33 @@
+.bar{
+	position: relative;
+	top: 60px;
+	left: 5px;
+	opacity: 0;
+}
+.bar .mark{
+    width: 30px;
+    height: 24px;
+    padding: 4px;
+    background-color: white;
+}
+.bar .info{
+    position: absolute;
+    border: 1px solid;
+    border-color: rgba(128, 128, 128, 0.35);
+    opacity: 0;
+    transition: opacity .3s ease-out;
+}
+.bar .info p{
+	color: rgba(0, 0, 0, 0.38)''
+}
+#keywordmodal .modal-body input{
+	text-align: center;
+	font-size: 19px;
+}
+#keywordmodal .modal-foot{
+	margin-left: 390px;
+}
+#keywordmodal .modal-foot button{
+	width: 80px;
+	margin-left: 10px;
+}

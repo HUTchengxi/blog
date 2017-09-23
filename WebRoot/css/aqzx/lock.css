@@ -1,0 +1,35 @@
+.lock{
+    height: 500px;
+    margin-left: 211px;
+	background-image: url(../../images/aqzx/lock2.jpg);
+    background-size: cover;
+    background-position-y: -166px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 180px;
+    width: 1169px;
+    display: none;
+}
+.lock button.gounlock{
+    display: inline-block;
+    position: relative;
+    left: 546px;
+    top: 250px;
+    background-color: red;
+    border: 1px solid;
+    border-color: red;
+    color: black;
+}
+#lockmodal .modal-foot{
+	position: relative;
+	height: 34px;
+}
+#lockmodal .modal-foot button{
+	float: right;
+	margin-right: 3px;
+}
+#lockmodal .modal-body p{
+	text-align: center;
+	color: red;
+	visibility: hidden;
+}

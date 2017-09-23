@@ -1,0 +1,41 @@
+<div class="main">
+	<div class="btns">
+		<a href="addtool" title="添加实用工具">添加</a>
+		<a href="#" title="删除指定id的实用工具" data-toggle="modal" data-target="#delmodal">删除</a>
+	</div>
+	<h3>博主收藏实用工具</h3>
+	<table border="1">
+		<thead>
+			<tr>
+				<td>id标识</td>
+				<td>发布人</td>			
+				<td>工具标题</td>
+				<td>使用地址</td>
+				<td>发布时间</td>
+				<td>发布类型</td>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<div class="modal fade" id="delmodal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">close</span>
+					</button>
+					<h4 class="modal-title text-center">请输入要删除的工具id标识</h4>
+				</div>
+				<div class="modal-body">
+					<input type="text" name="toolid" class="toolid form-control" placeholder="要删除的工具id标识" />
+				</div>
+				<div class="modal-foot">
+					<button type="button" class="btn btn-default realdel">删除</button>
+					<button type="button" class="btn btn-default reset" data-dismiss="modal">取消</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

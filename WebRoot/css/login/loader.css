@@ -1,0 +1,107 @@
+.loader{
+    position: absolute;
+    height: 300px;
+    width: 1280px;
+    z-index: 100;
+    top: 234px;
+    display: none;
+}
+.loading{
+    height: 300px;
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+.loading div{
+	float: left;
+	margin-left: 20px;
+	width: 5px;
+    border: 1px solid grey;
+    border-radius: 2px;
+    background: rgba(128, 128, 128, 1);
+    -o-animation: loadani 1s ease-out infinite;
+    -ms-animation: loadani 1s ease-out infinite;
+    -moz-animation: loadani 1s ease-out infinite;
+    -webkit-animation: loadani 1s ease-out infinite;
+    animation: loadani 1s ease-out infinite;
+    -o-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+.loading div:nth-child(1){
+    height: 70px;
+    margin-left: 160px;
+    margin-top: 100px;
+}
+.loading div:nth-child(2){
+	height: 60px;
+	margin-top: 104px;
+    -o-animation-delay: .2s;
+    -ms-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s;
+}
+.loading div:nth-child(3){
+	height: 50px;
+	margin-top: 108px;
+	-o-animation-delay: .4s;
+	-ms-animation-delay: .4s;
+	-moz-animation-delay: .4s;
+	-webkit-animation-delay: .4s;
+	animation-delay: .4s;
+}
+.loading div:nth-child(4){
+	height: 40px;
+	margin-top: 112px;
+	-o-animation-delay: .6s;
+	-ms-animation-delay: .6s;
+	-mos-animation-delay: .6s;
+	-webkit-animation-delay: .6s;
+	animation-delay: .6s;
+}
+.loading div:nth-child(5){
+	height: 30px;
+	margin-top: 116px;
+	-o-animation-delay: .8s;
+	-ms-animation-delay: .8s;
+	-mos-animation-delay: .8s;
+	-webkit-animation-delay: .8s;
+	animation-delay: .8s;
+}
+.loading div:nth-child(6){
+	height: 20px;
+	margin-top: 120px;
+	-o-animation-delay: 1s;
+	-ms-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+}
+@keyframes loadani{
+	0%{
+		opacity: 0;
+		-o-transform: rotateX(360deg);
+		-ms-transform: rotateX(360deg);
+		-moz-transform: rotateX(360deg);
+		-webkit-transform: rotateX(360deg);
+		transform: rotateX(360deg);
+	}
+	20%{
+		opacity: .5;
+	}
+	40%{
+		opacity: .8;
+	}
+	60%{
+		opacity: 1;
+	}
+	80%{
+		opacity: .8;
+	}
+	100%{
+		opacity: .5;
+	}
+}

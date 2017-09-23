@@ -1,0 +1,160 @@
+.guest-main{
+	float: right;
+	width: 1169px;
+	min-height: 500px;
+	margin-top: 50px;
+	text-align: center;
+}
+.guest-main h3{
+	text-align: center;
+	color: rgba(255, 0, 0, 0.73);
+}
+.guest-main .myguest{
+	margin-left: 16px;
+	width: 738px;
+	margin-top: 25px;
+}
+.guest-main .myguest span.pj:nth-child(1){
+	margin-left: 0;
+}
+.guest-main .myguest span.pj:nth-child(2){
+	margin-left: 35px;
+}
+.myguesttop .pj{
+	border: 1px solid #e74851;
+    font-size: 16px;
+    color: #e74851;
+    width: 66px;
+    height:  30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom: 0;
+    transition: all .2s ease-out;
+}
+.myguest .pj:hover{
+	background-color: rgba(255, 0, 0, 0.8);
+	color: rgba(255, 255, 255, 0.82);
+	cursor: pointer;
+}
+.myguest .clipj{
+	background-color: rgba(255, 0, 0, 0.8);
+	color: rgba(255, 255, 255, 0.82);
+}
+.myguesttop .tj{
+	font-size: 16px;
+	color: #e74851;
+	font-weight: bolder;
+	float: right;
+}
+.myguesttop .hr{
+	background-color: red;
+    height: 1px;
+    width: 492px;
+    margin-left: 66px;
+}
+.guest-main .myguest p.lefthr{
+	width: 196px;
+}
+.guest-main .myguest p.centerhr{
+    width: 39px;
+    margin-left: 326px;
+    margin-top: -12px;
+}
+.guest-main .myguest p.righthr{
+    margin-left: 430px;
+    margin-top: -11px;
+    width: 308px;
+}
+.guest-main .myguest p:nth-child(7){
+	width: 75px;
+    font-size: 16px;
+    text-align: right;
+    color: #e74851;
+    margin-left: 168px;
+}
+.myguestcontent ol{
+	list-style-type: none;
+}
+.myguestcontent ol li{
+	margin-bottom: 23px;
+}
+.myguestcontent{
+	margin-top: 11px;	
+	min-height: 70px;
+}
+.myguestcontent ol .maincontent .face{
+	background-image: url(../../../images/guest/guest_man.gif);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 42px;
+	height: 42px;
+	border-radius: 22px;
+	margin-left: 134px;
+	float: left;
+}
+.myguestcontent ol .maincontent .face:hover{
+	cursor: pointer;
+}
+.myguestcontent ol .maincontent .content{
+	position: relative;
+	margin-left: 175px;
+}
+.myguestcontent .maincontent .content .personinfo p{
+	margin-left: 20px;
+	color: rgba(128,128,128,.68);
+}
+.myguestcontent .maincontent .content .personinfo p span.nickspan{
+	color: #e74851;
+}
+.myguestcontent .maincontent .content .personinfo p span.comspan{
+	color: red;
+}
+.myguestcontent .maincontent .content .personinfo p span.timespan{
+	position: absolute;
+	right: 0;
+}
+.myguestcontent .maincontent .content .pubcontent p{
+	text-indent: 2em;
+	width: 511px;
+	word-break: break-all;
+	margin-left: 5px;
+}
+.myguestcontent .maincontent .content .modgroup{
+	width: 536px;
+	text-align: right;
+}
+.myguestcontent .maincontent .content .modgroup a{
+	margin-right: 14px;
+	color: rgba(128, 128, 128, .62);
+}
+.myguestcontent .maincontent .content .modgroup a:hover{
+	color: rgba(128,128,128,.85);
+	text-decoration: none;
+}
+.myguest .modpage a{
+	font-size: 16px;
+	margin-right: 10px;
+}
+.cloader{
+	margin-left: 187px;
+}
+#editgroup{
+	margin-top: 4px;
+}
+#editgroup a{
+	font-size: 16px;
+	margin-right: 17px;
+	color: red;
+	opacity: .7;
+	transition: all .2s ease-out;
+}
+#editgroup a:hover{
+	text-decoration: underline;
+	opacity: 1;
+}
+.content .personinfo p{
+	text-align: left;
+}

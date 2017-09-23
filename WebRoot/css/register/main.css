@@ -1,0 +1,84 @@
+.main{
+    position: relative;
+    width: 700px;
+    height: 643px;
+    background-color: rgba(255, 255, 255, 0.77);
+    left: 291px;
+    top: 100px;
+    margin-bottom: 100px;
+}
+.main h3{
+    text-align: center;
+    color: rgba(0, 231, 255, 0.75);
+}
+.main form div{
+	text-align: center;
+	margin-top: 55px;
+}
+.main form div label{
+	font-size: 16px;
+	margin-right: 12px;
+	color: rgba(0, 0, 0, 0.68);
+}
+.main form div input{
+    width: 296px;
+    height: 29px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.68);
+    border: 1px solid white;
+}
+.main form div span{
+    color: rgba(169, 37, 37, 0.97);
+    font-size: 18px;
+    opacity: 0;
+}
+.main form div span.glyphicon-ok{
+    color: #27ff00;
+    position: relative;
+    right: 22px;
+}
+.main form div span.infospan{
+    font-size: 10px;
+    display: inline-block;
+    width: 86px;
+    color: rgba(255, 0, 0, 0.66);
+    position: relative;
+    right: 15px;
+    opacity: 0;
+}
+.main form div.other-link{
+	margin-bottom: -49px;
+}
+.main form div.btn-group{
+	width: 700px;
+	text-align: center;
+}
+.main form div.btn-group button.register{
+	margin-right: 100px;
+}
+.main form div.btn-group button{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	background-color: rgba(111,213,8,.79);
+	border: 1px solid rgba(111,213,8,.79);
+	color: rgba(255, 255, 255, 0.78);
+}
+.main form div.btn-group button[type='reset']{
+	color: rgba(0, 0, 0, 0.61);
+	background-color: rgba(128, 128, 128, 0.79);
+	border: 1px solid rgba(128, 128, 128, 0.79);
+}
+.main form div.btn-group button.register:hover{
+	color: white;
+	border: 1px solid rgb(111,213,8);
+	background-color: rgb(111,213,8);
+}
+.main form div.btn-group button[type='reset']:hover{
+	color: rgb(0,0,0);
+	border: 1px solid rgb(128, 128, 128);
+	background-color: rgb(128, 128, 128);
+}
+
+

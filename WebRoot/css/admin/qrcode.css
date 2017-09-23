@@ -1,0 +1,56 @@
+/**
+.extra a{
+	font-size: 36px;
+    color: rgba(255, 255, 255, 0.62);
+    display: inline-block;
+	margin-top: 15px;
+	transition: color .2s ease-out;
+}
+.extra a:hover{
+	color: rgba(255,255,255,.8);
+}
+**/
+
+.zhezhao{
+	z-index: 99;
+	width: 100%;
+	position: absolute;
+	background-color: rgba(128, 128, 128, 0.63);
+	opacity: 0;
+	display: none;
+	top: 0;
+	left: 0;
+}
+
+
+.qrcode{
+    position: fixed;
+    left: 38%;
+    top: 32%;
+    background: white;
+    width: 350px;
+    height: 315px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+}
+#code{
+	text-align: center;
+	margin-top: 23px;
+}
+.qrcode a{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    color: rgba(0, 0, 0, .37);
+}
+.qrcode a:hover{
+	color: rgba(0,0,0,.67);
+}
+.qrcode p{
+    color: black;
+    text-align: center;
+    font-size: 19px;
+}

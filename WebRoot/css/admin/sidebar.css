@@ -1,0 +1,17 @@
+.sidebar{
+    position: fixed;
+    bottom: 220px;
+    right: 34px;
+}
+.sidebar .gobtn-group a{
+    font-size: 36px;
+    color: rgba(255, 255, 255, 0.62);
+    display: inline-block;
+	margin-top: 15px;
+	transition: color .2s ease-out;
+	visibility: hidden;
+	opacity: 0; 
+}
+.sidebar .gobtn-group a:hover{
+	color: rgba(255,255,255,.8);
+}

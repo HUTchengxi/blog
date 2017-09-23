@@ -1,0 +1,10 @@
+.commend{
+    width: 408px;
+    height: 300px;
+    border: 1px solid grey;
+    position: absolute;
+    top: 446px;
+    right: 0;
+    background-color: white;
+    margin-top: 200px;
+}

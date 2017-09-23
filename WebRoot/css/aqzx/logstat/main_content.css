@@ -1,0 +1,38 @@
+.log-main{
+	float: right;
+	width: 1169px;
+	min-height: 500px;
+	margin-top: 50px;
+	text-align: center;
+}
+.log-main table{
+	font-size: 23px;
+	min-width: 870px;
+	margin: 0 auto;
+}
+.log-main table td{
+	text-align: center;
+}
+.log-main table tr td span{
+	color: rgba(255, 0, 0, 0.61);
+}
+.log-main table thead tr{
+	border-bottom: 2px solid;
+}
+.log-main table tbody tr{
+	border: 1px solid;
+}
+.log-main table tbody tr td:nth-child(1), .log-main table tbody tr td:nth-child(2), .log-main table tbody tr td:nth-child(3){
+	border-right: 1px solid;	
+}
+.log-main table tbody tr td{
+	color: red;	
+}
+
+.log-main .mod-page{
+	margin-top: 20px;
+}
+.log-main .mod-page a{
+	margin-right: 11px;
+	font-size: 18px;
+}

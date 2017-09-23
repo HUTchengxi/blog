@@ -1,0 +1,71 @@
+.photo-main{
+	float: right;
+	width: 1169px;
+	min-height: 500px;
+	margin-top: 50px;
+	text-align: center;
+	opacityL 0;
+}
+.photo-main h3{
+	text-align: center;
+	color: rgba(255, 0, 0, 0.73);
+}
+.photo-main a.load{
+    position: absolute;
+    top: 57px;
+    right: 400px;
+    font-size: 16px;
+    color: rgb(251, 11, 11);
+}
+
+.main-content .group label{
+	font-size: 16px;
+	color: grey;
+	margin-right: 10px;
+}
+.main-content .group p,.main-content .group span{
+	visibility: hidden;
+	color: red;
+}
+.main-content .group span{
+	color: #27ff00;
+}
+.main-content .group span.glyphicon-remove{
+	left: -16px;
+	color: rgba(169, 37, 37, 0.97);
+}
+.main-content .group:nth-child(3) input:nth-child(2):hover{
+	cursor: pointer;
+}
+.main-content .group:nth-child(3) input:nth-child(3){
+	display: none;
+}
+.main-content .group:nth-child(4){
+	display: none;
+}
+.main-content .group:nth-child(4) img{
+	width: 222px;
+}
+.main-content .group:nth-child(4) p{
+    font-size: 16px;
+    color: grey;
+    visibility: visible;
+}
+.main-content .group:nth-child(5){
+	margin-top: 15px;
+}
+.main-content .group:nth-child(5) a{
+    display: inline-block;
+    border: 1px solid white;
+    width: 70px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.82);
+    background-color: #0fdecb;
+    margin-right: 45px;
+}
+.main-content .group:nth-child(5) a:nth-child(2){
+	background-color: grey;
+}

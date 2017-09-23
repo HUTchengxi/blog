@@ -1,0 +1,60 @@
+.show{
+	width: 771px;
+    position: fixed;
+    left: 227px;
+    top: 145px;
+    z-index: 1000;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+}
+.show .left .img img, .show .left .btn, .show .right{
+	opacity: 0;
+}
+.show div.left{
+	float: left;
+    width: 235px;
+    height: 250px;
+}
+.show .left .img{
+    border: 1px solid;
+    height: 227px;
+    width: 190px;
+}
+.show .left .img img{
+    margin-left: 22px;
+    margin-top: 31px;
+    width: 139px;
+    height: 166px;
+}
+.show .left .btn{
+	margin-left: 25px;
+	margin-top: 12px;
+}
+.show .left .btn a{
+    display: inline-block;
+    width: 100px;
+    border: 1px solid;
+    height: 25px;
+    line-height: 25px;
+    background-color: rgba(24, 73, 210, 0.52);
+    color: white;
+}
+.show .right{
+    position: relative;
+    top: 35px;
+}
+.show .exit{
+	width: 50px;
+	position: relative;
+	left: 750px;
+	font-size: 27px;
+	top: -253px;
+}
+.show .exit a{
+	color: rgba(128, 128, 128, 0.56);
+}
+.show .exit a:hover{
+	color: rgba(128, 128, 128, 0.89);
+	text-decoration: none;
+}

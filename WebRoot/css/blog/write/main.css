@@ -1,0 +1,120 @@
+body{
+	opacity: 0;
+	transition: opacity .5s ease-out;
+}
+.main{
+	position: relative;
+	width: 990px;
+    height: 50px;
+}
+@media screen and (min-width: 768px) and (max-width: 1244px){
+	.main{
+		position: relative;
+		top: 103px;
+	}
+}
+.main-choose{
+	opacity: 0;
+	display: none;	
+}
+.main-title input{
+    display: inline-block;
+    width: 990px;
+    height: 50px;
+    font-size: 23px;
+    margin-left: 10px;
+    border: 0;
+}
+.main-btn{
+    position: relative;
+    /*left: 1136px;*/
+    left: 121%;
+    top: -40px;
+    width: 120px;
+    height: 40px;
+}
+.main-btn button{
+   	display:inline-block;
+    width: 120px;
+    height: 40px;
+    background-color: rgba(190, 26, 33,1);
+    border: 1px solid rgba(190, 26, 33,1);
+    color: white;
+    font-size: 19px;
+    transition: background-color .2s ease-out;
+}
+.main-btn button:hover{
+	background-color: rgba(190,26,33,.7);
+}
+#myEditor{
+	position:relative;
+	top: -34px;
+}
+.main .main-choose{
+    position: absolute;
+    background: white;
+    top: 25px;
+    left: 332px;
+    width: 600px;
+    min-height: 671px;
+    z-index: 1001;
+}
+.main .main-choose div.exit-btn{
+    position: absolute;
+    left: 575px;
+    top: -14px;
+}
+.main .main-choose .exit{
+    font-size: 20px;
+    color: rgba(158, 158, 158, 0.48);
+}
+.main .main-choose .choose-title{
+	position: relative;
+	left: 7px;
+}
+.main .main-choose div{
+	position: relative;
+	left: 16px;
+	margin-top: 20px;
+}
+.main .main-choose label{
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.41);
+}
+.main .main-choose select{
+	margin-left: 20px;
+	width: 215px;
+	height: 36px;
+	border: 1px solid rgba(128, 128, 128, 0.35)
+}
+.main .main-choose select:hover{
+	cursor: pointer;
+}
+.main .main-choose  img{
+	width: 400px;
+	height: 225px;
+}
+.main .main-choose .choose-keywords ul{
+	list-style: none;
+    width: 568px;
+    border: 2px solid rgba(128, 128, 128, 0.63);
+}
+.main .main-choose .choose-keywords ul li{
+	float: left;
+	margin-right: 16px;
+}
+.main div.pub-btn{
+	left: 156px;
+}
+.main .pub-btn button{
+    width: 70px;
+    height: 27px;
+    background-color: rgba(190, 26, 33,1);
+    border: 1px solid rgb(190, 26, 33);
+    color: white;
+}
+.main .pub-btn .declear{
+	background-color: rgba(153, 153, 153,1);
+	border: 1px solid rgb(153, 153, 153);
+	margin-right: 93px;
+}

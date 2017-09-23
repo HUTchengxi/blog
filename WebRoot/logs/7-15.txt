@@ -1,0 +1,19 @@
+1.编写前端笔记博客
+
+2.修改页面登录形式，登录成功就不需要弹出登录成功alert，而是在一秒之后自动进行首页页面
+
+3.编写搜狗2015前端笔试题试卷错题汇总
+
+4.编写牛客网前端工程师能力评估试卷错题汇总
+
+
+
+		JS错题知识点归纳
+1.js中的typeof方法只返回：string/number/object/undefine/function
+2.需要注意的是：null == undefined
+3.js有五种原始类型：分别是Undefined/Null/Boolean/Number/String
+4.判断一个js对象是否为Array，最准确的方式是通过原型链进行判断：Object.prototype.toString.call(arr) === '[object Array]';
+5.在3中的五中原始类型中，会返回false的情况为：Boolean中的false、String中的空字符串、Number中的0和null、Object中的null、Undefined中的undefined
+6.在js中，当/操作两边的数都是整数时，/运算符也不是整除运算符，而是简单的除以运算，会返回浮点型数据
+7.在js中，如果两个同名函数一前一后被调用，最终调用的真正函数也只是后面的，js中没有函数重载，后面都会覆盖掉前面的同名函数
+8.

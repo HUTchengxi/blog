@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.head{
+	overflow: hidden;
+}
+.head .head-top h5{
+    position: relative;
+    top: -5px;
+    left: 580px;
+    color: rgba(195, 13, 79, 0.39);
+}
+.head .head-logo{
+	width: 104px;
+	height: 70px;
+	position: relative;
+	left: 13px;
+	top: -27px;
+}
+.head .head-logo a{
+	text-decoration: none;
+}
+.head .head-logo a span{
+	font-size: 30px;
+	transition: color .2s ease-out;
+	color: #337ab7;
+}
+.head .head-logo a span:hover{
+	color: red;
+}

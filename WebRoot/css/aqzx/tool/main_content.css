@@ -1,0 +1,60 @@
+.tool-main{
+	float: right;
+	width: 1169px;
+	min-height: 500px;
+	margin-top: 50px;
+	text-align: center;
+	opacityL 0;
+}
+.tool-main h3{
+	text-align: center;
+	color: rgba(255, 0, 0, 0.73);
+}
+.tool-main table{
+	font-size: 23px;
+	min-width: 870px;
+	margin: 0 auto;
+}
+.tool-main table td{
+	text-align: center;
+}
+.tool-main table tr td span{
+	color: rgba(255, 0, 0, 0.61);
+}
+.tool-main div.btns{
+    position:  relative;
+    top: 49px;
+    left: 685px;
+    width: 240px;
+}
+.tool-main div.btns a{
+	margin-left: 40px;
+	font-size: 18px;
+}
+.tool-main div.btns a:hover{
+	color: red;
+}
+#delmodal .modal-body input{
+	text-align: center;
+	font-size: 19px;
+}
+#delmodal .modal-foot{
+	margin-left: 390px;
+}
+#delmodal .modal-foot button{
+	width: 80px;
+	margin-left: 10px;
+}
+
+.tool-main .mod-page{
+	margin-top: 20px;
+}
+.tool-main .mod-page a{
+	margin-right: 11px;
+	font-size: 17px;
+}
+.tool-main .main-content div.none{
+    position: relative;
+    top: 20px;
+    margin-bottom: 53px;
+}
